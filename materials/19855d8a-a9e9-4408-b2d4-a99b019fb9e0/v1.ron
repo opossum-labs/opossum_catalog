@@ -1,0 +1,57 @@
+{
+    "schema_version": 1,
+    "id": "19855d8a-a9e9-4408-b2d4-a99b019fb9e0",
+    "version": 1,
+    "name": "P-SF68",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 2.3330067,
+                k2: 0.452961396,
+                k3: 1.25172339,
+                l1: 0.0168838419,
+                l2: 0.0716086325,
+                l3: 118.707479,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.4, 0.007),
+                        (0.405, 0.036),
+                        (0.42, 0.302),
+                        (0.436, 0.574),
+                        (0.46, 0.758),
+                        (0.5, 0.905),
+                        (0.546, 0.976),
+                        (0.58, 0.989),
+                        (0.62, 0.994),
+                        (0.66, 0.996),
+                        (0.7000000000000001, 0.997),
+                        (1.06, 0.999),
+                        (1.53, 0.996),
+                        (1.97, 0.976),
+                        (2.325, 0.905),
+                        (2.5, 0.793),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.65),
+        expansion_coefficient: Some(0.000008429999999999999),
+    )),
+    "mechanical": Some((
+        density: Some(6190.0),
+        youngs_modulus: Some(79000000000.0),
+    )),
+}

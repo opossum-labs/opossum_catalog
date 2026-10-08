@@ -1,0 +1,62 @@
+{
+    "schema_version": 1,
+    "id": "24482a12-6b77-4e12-8b92-28fdc9e5168e",
+    "version": 1,
+    "name": "N-SF2",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.47343127,
+                k2: 0.163681849,
+                k3: 1.36920899,
+                l1: 0.0109019098,
+                l2: 0.0585683687,
+                l3: 127.404933,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.35000000000000003, 0.001),
+                        (0.365, 0.132),
+                        (0.37, 0.325),
+                        (0.38, 0.693),
+                        (0.39, 0.857),
+                        (0.4, 0.928),
+                        (0.405, 0.944),
+                        (0.42, 0.97),
+                        (0.436, 0.979),
+                        (0.46, 0.984),
+                        (0.5, 0.99),
+                        (0.546, 0.994),
+                        (0.58, 0.995),
+                        (0.62, 0.994),
+                        (0.66, 0.994),
+                        (0.7000000000000001, 0.995),
+                        (1.06, 0.999),
+                        (1.53, 0.994),
+                        (1.97, 0.971),
+                        (2.325, 0.896),
+                        (2.5, 0.852),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(1.14),
+        expansion_coefficient: Some(0.0000066799999999999996),
+    )),
+    "mechanical": Some((
+        density: Some(2720.0),
+        youngs_modulus: Some(86000000000.0),
+    )),
+}

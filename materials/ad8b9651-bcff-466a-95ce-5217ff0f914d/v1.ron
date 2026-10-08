@@ -1,0 +1,68 @@
+{
+    "schema_version": 1,
+    "id": "ad8b9651-bcff-466a-95ce-5217ff0f914d",
+    "version": 1,
+    "name": "N-FK51A",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 0.971247817,
+                k2: 0.216901417,
+                k3: 0.904651666,
+                l1: 0.00472301995,
+                l2: 0.0153575612,
+                l3: 168.68133,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.28, 0.058),
+                        (0.29, 0.137),
+                        (0.3, 0.262),
+                        (0.31, 0.428),
+                        (0.32, 0.618),
+                        (0.334, 0.831),
+                        (0.35000000000000003, 0.948),
+                        (0.365, 0.985),
+                        (0.37, 0.99),
+                        (0.38, 0.995),
+                        (0.39, 0.997),
+                        (0.4, 0.997),
+                        (0.405, 0.997),
+                        (0.42, 0.997),
+                        (0.436, 0.997),
+                        (0.46, 0.997),
+                        (0.5, 0.998),
+                        (0.546, 0.999),
+                        (0.58, 0.999),
+                        (0.62, 0.998),
+                        (0.66, 0.998),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.998),
+                        (1.53, 0.996),
+                        (1.97, 0.996),
+                        (2.325, 0.933),
+                        (2.5, 0.891),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.76),
+        expansion_coefficient: Some(0.00001274),
+    )),
+    "mechanical": Some((
+        density: Some(3680.0),
+        youngs_modulus: Some(73000000000.0),
+    )),
+}

@@ -1,0 +1,62 @@
+{
+    "schema_version": 1,
+    "id": "233a9016-8165-4b5f-b8a5-32a48caadb6a",
+    "version": 1,
+    "name": "P-SF69",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.62594647,
+                k2: 0.235927609,
+                k3: 1.67434623,
+                l1: 0.0121696677,
+                l2: 0.0600710405,
+                l3: 145.651908,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.35000000000000003, 0.0),
+                        (0.365, 0.16),
+                        (0.37, 0.364),
+                        (0.38, 0.686),
+                        (0.39, 0.847),
+                        (0.4, 0.915),
+                        (0.405, 0.933),
+                        (0.42, 0.963),
+                        (0.436, 0.976),
+                        (0.46, 0.985),
+                        (0.5, 0.993),
+                        (0.546, 0.997),
+                        (0.58, 0.998),
+                        (0.62, 0.997),
+                        (0.66, 0.997),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.999),
+                        (1.53, 0.993),
+                        (1.97, 0.954),
+                        (2.325, 0.857),
+                        (2.5, 0.804),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(1.12),
+        expansion_coefficient: Some(0.00000899),
+    )),
+    "mechanical": Some((
+        density: Some(2930.0),
+        youngs_modulus: Some(96000000000.0),
+    )),
+}

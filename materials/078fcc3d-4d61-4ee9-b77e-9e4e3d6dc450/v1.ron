@@ -1,0 +1,68 @@
+{
+    "schema_version": 1,
+    "id": "078fcc3d-4d61-4ee9-b77e-9e4e3d6dc450",
+    "version": 1,
+    "name": "N-LAK33B",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.42288601,
+                k2: 0.593661336,
+                k3: 1.1613526,
+                l1: 0.00670283452,
+                l2: 0.021941621,
+                l3: 80.7407701,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.28, 0.022),
+                        (0.29, 0.118),
+                        (0.3, 0.217),
+                        (0.31, 0.283),
+                        (0.32, 0.455),
+                        (0.334, 0.657),
+                        (0.35000000000000003, 0.821),
+                        (0.365, 0.91),
+                        (0.37, 0.928),
+                        (0.38, 0.954),
+                        (0.39, 0.971),
+                        (0.4, 0.98),
+                        (0.405, 0.982),
+                        (0.42, 0.988),
+                        (0.436, 0.992),
+                        (0.46, 0.994),
+                        (0.5, 0.997),
+                        (0.546, 0.998),
+                        (0.58, 0.998),
+                        (0.62, 0.997),
+                        (0.66, 0.998),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.998),
+                        (1.53, 0.985),
+                        (1.97, 0.937),
+                        (2.325, 0.679),
+                        (2.5, 0.398),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.89),
+        expansion_coefficient: Some(0.00000583),
+    )),
+    "mechanical": Some((
+        density: Some(4220.0),
+        youngs_modulus: Some(122000000000.0),
+    )),
+}

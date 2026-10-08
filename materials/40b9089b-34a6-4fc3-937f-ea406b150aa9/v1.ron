@@ -1,0 +1,65 @@
+{
+    "schema_version": 1,
+    "id": "40b9089b-34a6-4fc3-937f-ea406b150aa9",
+    "version": 1,
+    "name": "N-LAK12",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.17365704,
+                k2: 0.588992398,
+                k3: 0.978014394,
+                l1: 0.00577031797,
+                l2: 0.0200401678,
+                l3: 95.4873482,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.31, 0.032),
+                        (0.32, 0.152),
+                        (0.334, 0.468),
+                        (0.35000000000000003, 0.733),
+                        (0.365, 0.882),
+                        (0.37, 0.91),
+                        (0.38, 0.946),
+                        (0.39, 0.967),
+                        (0.4, 0.976),
+                        (0.405, 0.977),
+                        (0.42, 0.981),
+                        (0.436, 0.983),
+                        (0.46, 0.987),
+                        (0.5, 0.994),
+                        (0.546, 0.996),
+                        (0.58, 0.996),
+                        (0.62, 0.995),
+                        (0.66, 0.996),
+                        (0.7000000000000001, 0.997),
+                        (1.06, 0.997),
+                        (1.53, 0.99),
+                        (1.97, 0.937),
+                        (2.325, 0.764),
+                        (2.5, 0.592),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.68),
+        expansion_coefficient: Some(0.000007599999999999999),
+    )),
+    "mechanical": Some((
+        density: Some(4100.0),
+        youngs_modulus: Some(87000000000.0),
+    )),
+}

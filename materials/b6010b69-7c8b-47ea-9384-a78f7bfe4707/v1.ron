@@ -1,0 +1,64 @@
+{
+    "schema_version": 1,
+    "id": "b6010b69-7c8b-47ea-9384-a78f7bfe4707",
+    "version": 1,
+    "name": "N-LASF41",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.86348331,
+                k2: 0.413307255,
+                k3: 1.35784815,
+                l1: 0.00910368219,
+                l2: 0.0339247268,
+                l3: 93.3580595,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.32, 0.04),
+                        (0.334, 0.292),
+                        (0.35000000000000003, 0.592),
+                        (0.365, 0.787),
+                        (0.37, 0.831),
+                        (0.38, 0.891),
+                        (0.39, 0.928),
+                        (0.4, 0.948),
+                        (0.405, 0.954),
+                        (0.42, 0.967),
+                        (0.436, 0.976),
+                        (0.46, 0.985),
+                        (0.5, 0.994),
+                        (0.546, 0.997),
+                        (0.58, 0.998),
+                        (0.62, 0.997),
+                        (0.66, 0.998),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.998),
+                        (1.53, 0.993),
+                        (1.97, 0.95),
+                        (2.325, 0.764),
+                        (2.5, 0.48),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.79),
+        expansion_coefficient: Some(0.00000619),
+    )),
+    "mechanical": Some((
+        density: Some(4850.0),
+        youngs_modulus: Some(124000000000.0),
+    )),
+}

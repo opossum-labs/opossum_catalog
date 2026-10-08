@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "8447ca50-ab3d-4df7-8542-be712c7fed15",
+    "version": 1,
+    "name": "BK7G18",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.26538542,
+                k2: 0.0144191073,
+                k3: 1.00323028,
+                l1: 0.00813104078,
+                l2: 0.0543303226,
+                l3: 102.821166,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.02),
+                        (0.37, 0.08),
+                        (0.38, 0.36),
+                        (0.39, 0.601),
+                        (0.4, 0.764),
+                        (0.405, 0.815),
+                        (0.42, 0.905),
+                        (0.436, 0.947),
+                        (0.46, 0.97),
+                        (0.5, 0.982),
+                        (0.546, 0.989),
+                        (0.58, 0.992),
+                        (0.62, 0.994),
+                        (0.66, 0.995),
+                        (0.7000000000000001, 0.997),
+                        (1.06, 0.999),
+                        (1.53, 0.992),
+                        (1.97, 0.933),
+                        (2.325, 0.782),
+                        (2.5, 0.634),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(1.19),
+        expansion_coefficient: Some(0.000007),
+    )),
+    "mechanical": Some((
+        density: Some(2520.0),
+        youngs_modulus: Some(82000000000.0),
+    )),
+}

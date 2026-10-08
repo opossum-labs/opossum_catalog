@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "11a18721-9606-4b09-ae88-5d3e69512d49",
+    "version": 1,
+    "name": "SF56A",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.70579259,
+                k2: 0.344223052,
+                k3: 1.09601828,
+                l1: 0.0133874699,
+                l2: 0.0579561608,
+                l3: 121.616024,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.04),
+                        (0.37, 0.12),
+                        (0.38, 0.398),
+                        (0.39, 0.7),
+                        (0.4, 0.857),
+                        (0.405, 0.896),
+                        (0.42, 0.959),
+                        (0.436, 0.98),
+                        (0.46, 0.99),
+                        (0.5, 0.996),
+                        (0.546, 0.998),
+                        (0.58, 0.998),
+                        (0.62, 0.998),
+                        (0.66, 0.997),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.999),
+                        (1.53, 0.996),
+                        (1.97, 0.967),
+                        (2.325, 0.896),
+                        (2.5, 0.867),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.69),
+        expansion_coefficient: Some(0.0000079),
+    )),
+    "mechanical": Some((
+        density: Some(4920.0),
+        youngs_modulus: Some(57000000000.0),
+    )),
+}

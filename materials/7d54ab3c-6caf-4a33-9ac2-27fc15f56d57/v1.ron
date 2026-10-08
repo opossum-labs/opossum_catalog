@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "7d54ab3c-6caf-4a33-9ac2-27fc15f56d57",
+    "version": 1,
+    "name": "N-BASF2",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.53652081,
+                k2: 0.156971102,
+                k3: 1.30196815,
+                l1: 0.0108435729,
+                l2: 0.0562278762,
+                l3: 131.3397,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.158),
+                        (0.37, 0.325),
+                        (0.38, 0.634),
+                        (0.39, 0.804),
+                        (0.4, 0.891),
+                        (0.405, 0.915),
+                        (0.42, 0.954),
+                        (0.436, 0.971),
+                        (0.46, 0.98),
+                        (0.5, 0.988),
+                        (0.546, 0.994),
+                        (0.58, 0.995),
+                        (0.62, 0.994),
+                        (0.66, 0.994),
+                        (0.7000000000000001, 0.996),
+                        (1.06, 0.999),
+                        (1.53, 0.994),
+                        (1.97, 0.971),
+                        (2.325, 0.896),
+                        (2.5, 0.857),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.94),
+        expansion_coefficient: Some(0.00000712),
+    )),
+    "mechanical": Some((
+        density: Some(3150.0),
+        youngs_modulus: Some(84000000000.0),
+    )),
+}

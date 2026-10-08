@@ -1,0 +1,59 @@
+{
+    "schema_version": 1,
+    "id": "bd8fbf6e-87e1-49a9-9a2c-6981966a165d",
+    "version": 1,
+    "name": "F2G12",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.34702224,
+                k2: 0.210037763,
+                k3: 19.5350768,
+                l1: 0.00980850553,
+                l2: 0.0471788018,
+                l3: 2279.1547,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.38, 0.02),
+                        (0.39, 0.12),
+                        (0.4, 0.246),
+                        (0.405, 0.345),
+                        (0.42, 0.618),
+                        (0.436, 0.804),
+                        (0.46, 0.919),
+                        (0.5, 0.967),
+                        (0.546, 0.981),
+                        (0.58, 0.989),
+                        (0.62, 0.992),
+                        (0.66, 0.994),
+                        (0.7000000000000001, 0.995),
+                        (1.06, 0.999),
+                        (1.53, 0.996),
+                        (1.97, 0.959),
+                        (2.325, 0.887),
+                        (2.5, 0.842),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.82),
+        expansion_coefficient: Some(0.000007599999999999999),
+    )),
+    "mechanical": Some((
+        density: Some(3610.0),
+        youngs_modulus: Some(58000000000.0),
+    )),
+}

@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "effcaa94-8727-438e-8ed1-bf89c6e6abea",
+    "version": 1,
+    "name": "K5G20",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.14094396,
+                k2: 0.14500119,
+                k3: 37.4705786,
+                l1: 0.00694945478,
+                l2: 0.0310574444,
+                l3: 4536.25624,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.029),
+                        (0.37, 0.13),
+                        (0.38, 0.442),
+                        (0.39, 0.686),
+                        (0.4, 0.821),
+                        (0.405, 0.857),
+                        (0.42, 0.924),
+                        (0.436, 0.954),
+                        (0.46, 0.971),
+                        (0.5, 0.984),
+                        (0.546, 0.99),
+                        (0.58, 0.993),
+                        (0.62, 0.994),
+                        (0.66, 0.995),
+                        (0.7000000000000001, 0.997),
+                        (1.06, 0.998),
+                        (1.53, 0.99),
+                        (1.97, 0.896),
+                        (2.325, 0.733),
+                        (2.5, 0.634),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(1.0),
+        expansion_coefficient: Some(0.00000899),
+    )),
+    "mechanical": Some((
+        density: Some(2590.0),
+        youngs_modulus: Some(68000000000.0),
+    )),
+}

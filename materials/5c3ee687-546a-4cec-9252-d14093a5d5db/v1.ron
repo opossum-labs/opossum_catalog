@@ -1,0 +1,62 @@
+{
+    "schema_version": 1,
+    "id": "5c3ee687-546a-4cec-9252-d14093a5d5db",
+    "version": 1,
+    "name": "N-F2",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.39757037,
+                k2: 0.159201403,
+                k3: 1.2686543,
+                l1: 0.00995906143,
+                l2: 0.0546931752,
+                l3: 119.248346,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.35000000000000003, 0.096),
+                        (0.365, 0.276),
+                        (0.37, 0.48),
+                        (0.38, 0.764),
+                        (0.39, 0.891),
+                        (0.4, 0.946),
+                        (0.405, 0.959),
+                        (0.42, 0.98),
+                        (0.436, 0.985),
+                        (0.46, 0.989),
+                        (0.5, 0.994),
+                        (0.546, 0.997),
+                        (0.58, 0.997),
+                        (0.62, 0.996),
+                        (0.66, 0.996),
+                        (0.7000000000000001, 0.997),
+                        (1.06, 0.998),
+                        (1.53, 0.991),
+                        (1.97, 0.95),
+                        (2.325, 0.837),
+                        (2.5, 0.746),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(1.05),
+        expansion_coefficient: Some(0.00000784),
+    )),
+    "mechanical": Some((
+        density: Some(2650.0),
+        youngs_modulus: Some(82000000000.0),
+    )),
+}

@@ -1,0 +1,66 @@
+{
+    "schema_version": 1,
+    "id": "bb03c45f-9c34-44a6-85bd-aa4dcf41e559",
+    "version": 1,
+    "name": "N-LASF44",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.78897105,
+                k2: 0.38675867,
+                k3: 1.30506243,
+                l1: 0.00872506277,
+                l2: 0.0308085023,
+                l3: 92.7743824,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.3, 0.029),
+                        (0.31, 0.068),
+                        (0.32, 0.152),
+                        (0.334, 0.378),
+                        (0.35000000000000003, 0.658),
+                        (0.365, 0.823),
+                        (0.37, 0.86),
+                        (0.38, 0.911),
+                        (0.39, 0.946),
+                        (0.4, 0.963),
+                        (0.405, 0.967),
+                        (0.42, 0.98),
+                        (0.436, 0.986),
+                        (0.46, 0.991),
+                        (0.5, 0.996),
+                        (0.546, 0.998),
+                        (0.58, 0.998),
+                        (0.62, 0.998),
+                        (0.66, 0.998),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.998),
+                        (1.53, 0.99),
+                        (1.97, 0.946),
+                        (2.325, 0.739),
+                        (2.5, 0.468),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.82),
+        expansion_coefficient: Some(0.00000621),
+    )),
+    "mechanical": Some((
+        density: Some(4440.0),
+        youngs_modulus: Some(124000000000.0),
+    )),
+}

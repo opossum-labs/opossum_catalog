@@ -1,0 +1,64 @@
+{
+    "schema_version": 1,
+    "id": "a7562b9c-15a0-4bd7-a3ed-f31d3bcb4da7",
+    "version": 1,
+    "name": "N-KZFS5",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.47460789,
+                k2: 0.193584488,
+                k3: 1.26589974,
+                l1: 0.00986143816,
+                l2: 0.0445477583,
+                l3: 106.436258,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.32, 0.017),
+                        (0.334, 0.372),
+                        (0.35000000000000003, 0.793),
+                        (0.365, 0.91),
+                        (0.37, 0.928),
+                        (0.38, 0.95),
+                        (0.39, 0.967),
+                        (0.4, 0.976),
+                        (0.405, 0.978),
+                        (0.42, 0.983),
+                        (0.436, 0.986),
+                        (0.46, 0.99),
+                        (0.5, 0.994),
+                        (0.546, 0.997),
+                        (0.58, 0.997),
+                        (0.62, 0.997),
+                        (0.66, 0.997),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.999),
+                        (1.53, 0.988),
+                        (1.97, 0.963),
+                        (2.325, 0.826),
+                        (2.5, 0.657),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.95),
+        expansion_coefficient: Some(0.00000638),
+    )),
+    "mechanical": Some((
+        density: Some(3040.0),
+        youngs_modulus: Some(89000000000.0),
+    )),
+}

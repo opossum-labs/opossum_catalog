@@ -1,0 +1,64 @@
+{
+    "schema_version": 1,
+    "id": "f8761bf2-ad26-4bdc-8359-3001f638628f",
+    "version": 1,
+    "name": "N-KZFS4",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.35055424,
+                k2: 0.197575506,
+                k3: 1.09962992,
+                l1: 0.0087628207,
+                l2: 0.0371767201,
+                l3: 90.3866994,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.32, 0.04),
+                        (0.334, 0.468),
+                        (0.35000000000000003, 0.815),
+                        (0.365, 0.924),
+                        (0.37, 0.941),
+                        (0.38, 0.963),
+                        (0.39, 0.971),
+                        (0.4, 0.979),
+                        (0.405, 0.981),
+                        (0.42, 0.984),
+                        (0.436, 0.987),
+                        (0.46, 0.99),
+                        (0.5, 0.995),
+                        (0.546, 0.997),
+                        (0.58, 0.997),
+                        (0.62, 0.997),
+                        (0.66, 0.997),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.998),
+                        (1.53, 0.984),
+                        (1.97, 0.951),
+                        (2.325, 0.749),
+                        (2.5, 0.51),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.84),
+        expansion_coefficient: Some(0.0000072999999999999996),
+    )),
+    "mechanical": Some((
+        density: Some(3000.0),
+        youngs_modulus: Some(78000000000.0),
+    )),
+}

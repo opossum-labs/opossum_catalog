@@ -1,0 +1,23 @@
+{
+    "schema_version": 1,
+    "id": "e62370e7-e03f-40e9-892d-9d703dcad538",
+    "version": 1,
+    "name": "Air",
+    "description": Some("Air @ 20°C, 1013 mBar, 50% rel. humidity"),
+    "optical": (
+        refractive_index: Air((
+            temperature: 293.15,
+            pressure: 101325.0,
+            humidity: 50.0,
+        )),
+        absorption: r#None,
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.0257),
+        expansion_coefficient: Some(0.003411),
+    )),
+    "mechanical": Some((
+        density: Some(1.199),
+        youngs_modulus: None,
+    )),
+}

@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "451cad2d-b9e1-434a-ba9f-a0615e92a807",
+    "version": 1,
+    "name": "SF57",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.81651371,
+                k2: 0.428893641,
+                k3: 1.07186278,
+                l1: 0.0143704198,
+                l2: 0.0592801172,
+                l3: 121.419942,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.04),
+                        (0.37, 0.16),
+                        (0.38, 0.523),
+                        (0.39, 0.727),
+                        (0.4, 0.847),
+                        (0.405, 0.882),
+                        (0.42, 0.941),
+                        (0.436, 0.971),
+                        (0.46, 0.987),
+                        (0.5, 0.994),
+                        (0.546, 0.998),
+                        (0.58, 0.998),
+                        (0.62, 0.998),
+                        (0.66, 0.998),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.999),
+                        (1.53, 0.996),
+                        (1.97, 0.971),
+                        (2.325, 0.91),
+                        (2.5, 0.891),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.62),
+        expansion_coefficient: Some(0.0000083),
+    )),
+    "mechanical": Some((
+        density: Some(5510.0),
+        youngs_modulus: Some(54000000000.0),
+    )),
+}

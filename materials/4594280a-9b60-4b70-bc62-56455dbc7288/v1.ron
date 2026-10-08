@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "4594280a-9b60-4b70-bc62-56455dbc7288",
+    "version": 1,
+    "name": "N-LAF7",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.74028764,
+                k2: 0.226710554,
+                k3: 1.32525548,
+                l1: 0.010792558,
+                l2: 0.0538626639,
+                l3: 106.268665,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.382),
+                        (0.37, 0.571),
+                        (0.38, 0.767),
+                        (0.39, 0.859),
+                        (0.4, 0.905),
+                        (0.405, 0.92),
+                        (0.42, 0.948),
+                        (0.436, 0.965),
+                        (0.46, 0.977),
+                        (0.5, 0.988),
+                        (0.546, 0.994),
+                        (0.58, 0.996),
+                        (0.62, 0.997),
+                        (0.66, 0.997),
+                        (0.7000000000000001, 0.997),
+                        (1.06, 0.998),
+                        (1.53, 0.995),
+                        (1.97, 0.969),
+                        (2.325, 0.858),
+                        (2.5, 0.673),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.83),
+        expansion_coefficient: Some(0.0000072999999999999996),
+    )),
+    "mechanical": Some((
+        density: Some(3730.0),
+        youngs_modulus: Some(96000000000.0),
+    )),
+}

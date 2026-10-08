@@ -1,0 +1,62 @@
+{
+    "schema_version": 1,
+    "id": "70a0a507-6ea7-40c9-96b4-9642252f72fd",
+    "version": 1,
+    "name": "N-LASF46B",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 2.17988922,
+                k2: 0.306495184,
+                k3: 1.56882437,
+                l1: 0.0125805384,
+                l2: 0.0567191367,
+                l3: 105.316538,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.35000000000000003, 0.0),
+                        (0.365, 0.05),
+                        (0.37, 0.181),
+                        (0.38, 0.504),
+                        (0.39, 0.707),
+                        (0.4, 0.815),
+                        (0.405, 0.847),
+                        (0.42, 0.901),
+                        (0.436, 0.933),
+                        (0.46, 0.954),
+                        (0.5, 0.977),
+                        (0.546, 0.989),
+                        (0.58, 0.991),
+                        (0.62, 0.992),
+                        (0.66, 0.993),
+                        (0.7000000000000001, 0.996),
+                        (1.06, 0.998),
+                        (1.53, 0.991),
+                        (1.97, 0.954),
+                        (2.325, 0.787),
+                        (2.5, 0.556),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.88),
+        expansion_coefficient: Some(0.00000597),
+    )),
+    "mechanical": Some((
+        density: Some(4510.0),
+        youngs_modulus: Some(121000000000.0),
+    )),
+}

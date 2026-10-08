@@ -1,0 +1,60 @@
+{
+    "schema_version": 1,
+    "id": "ec0a5c85-5fc9-4b0b-add0-2a8fcba97516",
+    "version": 1,
+    "name": "SF3",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.57230542,
+                k2: 0.339661149,
+                k3: 1.03593712,
+                l1: 0.0120382183,
+                l2: 0.0531603583,
+                l3: 120.005381,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.65),
+                        (0.37, 0.73),
+                        (0.38, 0.84),
+                        (0.39, 0.91),
+                        (0.4, 0.94),
+                        (0.405, 0.95),
+                        (0.42, 0.971),
+                        (0.436, 0.984),
+                        (0.46, 0.991),
+                        (0.5, 0.996),
+                        (0.546, 0.997),
+                        (0.58, 0.998),
+                        (0.62, 0.999),
+                        (0.66, 0.999),
+                        (0.7000000000000001, 0.999),
+                        (1.06, 0.998),
+                        (1.53, 0.994),
+                        (1.97, 0.963),
+                        (2.325, 0.9),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.706),
+        expansion_coefficient: Some(0.0000084),
+    )),
+    "mechanical": Some((
+        density: Some(4640.0),
+        youngs_modulus: Some(56000000000.0),
+    )),
+}

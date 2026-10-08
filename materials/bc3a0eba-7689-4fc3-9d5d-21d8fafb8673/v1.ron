@@ -1,0 +1,66 @@
+{
+    "schema_version": 1,
+    "id": "bc3a0eba-7689-4fc3-9d5d-21d8fafb8673",
+    "version": 1,
+    "name": "N-KZFS11",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.3322245,
+                k2: 0.28924161,
+                k3: 1.15161734,
+                l1: 0.0084029848,
+                l2: 0.034423972,
+                l3: 88.4310532,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.3, 0.048),
+                        (0.31, 0.23),
+                        (0.32, 0.468),
+                        (0.334, 0.727),
+                        (0.35000000000000003, 0.882),
+                        (0.365, 0.95),
+                        (0.37, 0.963),
+                        (0.38, 0.976),
+                        (0.39, 0.983),
+                        (0.4, 0.987),
+                        (0.405, 0.988),
+                        (0.42, 0.99),
+                        (0.436, 0.991),
+                        (0.46, 0.993),
+                        (0.5, 0.996),
+                        (0.546, 0.997),
+                        (0.58, 0.997),
+                        (0.62, 0.997),
+                        (0.66, 0.997),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.999),
+                        (1.53, 0.991),
+                        (1.97, 0.965),
+                        (2.325, 0.779),
+                        (2.5, 0.507),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.81),
+        expansion_coefficient: Some(0.000006559999999999999),
+    )),
+    "mechanical": Some((
+        density: Some(3200.0),
+        youngs_modulus: Some(79000000000.0),
+    )),
+}

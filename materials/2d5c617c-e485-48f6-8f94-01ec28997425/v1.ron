@@ -1,0 +1,67 @@
+{
+    "schema_version": 1,
+    "id": "2d5c617c-e485-48f6-8f94-01ec28997425",
+    "version": 1,
+    "name": "N-SK5HTi",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 0.991463823,
+                k2: 0.495982121,
+                k3: 0.987393925,
+                l1: 0.00522730467,
+                l2: 0.0172733646,
+                l3: 98.3594579,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.29, 0.32),
+                        (0.3, 0.542),
+                        (0.31, 0.72),
+                        (0.32, 0.841),
+                        (0.334, 0.945),
+                        (0.35000000000000003, 0.981),
+                        (0.365, 0.991),
+                        (0.37, 0.993),
+                        (0.38, 0.996),
+                        (0.39, 0.997),
+                        (0.4, 0.997),
+                        (0.405, 0.997),
+                        (0.42, 0.997),
+                        (0.436, 0.997),
+                        (0.46, 0.997),
+                        (0.5, 0.998),
+                        (0.546, 0.998),
+                        (0.58, 0.998),
+                        (0.62, 0.998),
+                        (0.66, 0.999),
+                        (0.7000000000000001, 0.999),
+                        (1.06, 1.0),
+                        (1.53, 0.995),
+                        (1.97, 0.99),
+                        (2.325, 0.989),
+                        (2.5, 0.957),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.99),
+        expansion_coefficient: Some(0.0000055),
+    )),
+    "mechanical": Some((
+        density: Some(3300.0),
+        youngs_modulus: Some(84000000000.0),
+    )),
+}

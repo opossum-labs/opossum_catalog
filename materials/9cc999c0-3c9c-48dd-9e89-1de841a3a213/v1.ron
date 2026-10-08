@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "9cc999c0-3c9c-48dd-9e89-1de841a3a213",
+    "version": 1,
+    "name": "N-SF8",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.55075812,
+                k2: 0.209816918,
+                k3: 1.46205491,
+                l1: 0.0114338344,
+                l2: 0.0582725652,
+                l3: 133.24165,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.158),
+                        (0.37, 0.345),
+                        (0.38, 0.672),
+                        (0.39, 0.831),
+                        (0.4, 0.901),
+                        (0.405, 0.919),
+                        (0.42, 0.95),
+                        (0.436, 0.965),
+                        (0.46, 0.976),
+                        (0.5, 0.985),
+                        (0.546, 0.993),
+                        (0.58, 0.994),
+                        (0.62, 0.993),
+                        (0.66, 0.993),
+                        (0.7000000000000001, 0.995),
+                        (1.06, 0.997),
+                        (1.53, 0.988),
+                        (1.97, 0.946),
+                        (2.325, 0.815),
+                        (2.5, 0.746),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(1.03),
+        expansion_coefficient: Some(0.00000856),
+    )),
+    "mechanical": Some((
+        density: Some(2900.0),
+        youngs_modulus: Some(88000000000.0),
+    )),
+}

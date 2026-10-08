@@ -1,0 +1,58 @@
+{
+    "schema_version": 1,
+    "id": "de9bac2a-2201-4500-ab49-56cadbbec72f",
+    "version": 1,
+    "name": "SF11",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.73848403,
+                k2: 0.311168974,
+                k3: 1.17490871,
+                l1: 0.0136068604,
+                l2: 0.0615960463,
+                l3: 121.922711,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.39, 0.18),
+                        (0.4, 0.525),
+                        (0.405, 0.65),
+                        (0.42, 0.867),
+                        (0.436, 0.941),
+                        (0.46, 0.976),
+                        (0.5, 0.99),
+                        (0.546, 0.996),
+                        (0.58, 0.996),
+                        (0.62, 0.996),
+                        (0.66, 0.996),
+                        (0.7000000000000001, 0.997),
+                        (1.06, 0.999),
+                        (1.53, 0.993),
+                        (1.97, 0.971),
+                        (2.325, 0.867),
+                        (2.5, 0.821),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.737),
+        expansion_coefficient: Some(0.000006099999999999999),
+    )),
+    "mechanical": Some((
+        density: Some(4740.0),
+        youngs_modulus: Some(66000000000.0),
+    )),
+}

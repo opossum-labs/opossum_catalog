@@ -1,0 +1,53 @@
+{
+    "schema_version": 1,
+    "id": "6b20bc38-ec53-4370-ba17-c58551fb370f",
+    "version": 1,
+    "name": "SF6G05",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.62113942,
+                k2: 0.506586092,
+                k3: 10.4032298,
+                l1: 0.0113478992,
+                l2: 0.0535840223,
+                l3: 1118.83658,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.46, 0.09),
+                        (0.5, 0.642),
+                        (0.546, 0.917),
+                        (0.58, 0.958),
+                        (0.62, 0.972),
+                        (0.66, 0.98),
+                        (0.7000000000000001, 0.985),
+                        (1.06, 0.998),
+                        (1.53, 0.995),
+                        (1.97, 0.965),
+                        (2.325, 0.877),
+                        (2.5, 0.847),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: None,
+        expansion_coefficient: Some(0.0000078),
+    )),
+    "mechanical": Some((
+        density: Some(5200.0),
+        youngs_modulus: None,
+    )),
+}

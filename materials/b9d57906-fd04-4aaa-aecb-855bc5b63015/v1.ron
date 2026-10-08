@@ -1,0 +1,66 @@
+{
+    "schema_version": 1,
+    "id": "b9d57906-fd04-4aaa-aecb-855bc5b63015",
+    "version": 1,
+    "name": "N-KZFS2",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.23697554,
+                k2: 0.153569376,
+                k3: 0.903976272,
+                l1: 0.00747170505,
+                l2: 0.0308053556,
+                l3: 70.1731084,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.3, 0.012),
+                        (0.31, 0.246),
+                        (0.32, 0.565),
+                        (0.334, 0.81),
+                        (0.35000000000000003, 0.915),
+                        (0.365, 0.954),
+                        (0.37, 0.963),
+                        (0.38, 0.971),
+                        (0.39, 0.98),
+                        (0.4, 0.985),
+                        (0.405, 0.987),
+                        (0.42, 0.99),
+                        (0.436, 0.992),
+                        (0.46, 0.995),
+                        (0.5, 0.997),
+                        (0.546, 0.998),
+                        (0.58, 0.998),
+                        (0.62, 0.998),
+                        (0.66, 0.998),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.996),
+                        (1.53, 0.976),
+                        (1.97, 0.915),
+                        (2.325, 0.583),
+                        (2.5, 0.276),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.81),
+        expansion_coefficient: Some(0.00000444),
+    )),
+    "mechanical": Some((
+        density: Some(2540.0),
+        youngs_modulus: Some(66000000000.0),
+    )),
+}

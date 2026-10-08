@@ -1,0 +1,59 @@
+{
+    "schema_version": 1,
+    "id": "68f5f476-d8be-4238-85cf-abd07aa89aa6",
+    "version": 1,
+    "name": "LAK9G15",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.28773667,
+                k2: 0.518244853,
+                k3: 26.1756109,
+                l1: 0.0055754192,
+                l2: 0.0223679524,
+                l3: 1892.2533,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.38, 0.026),
+                        (0.39, 0.123),
+                        (0.4, 0.292),
+                        (0.405, 0.382),
+                        (0.42, 0.634),
+                        (0.436, 0.799),
+                        (0.46, 0.919),
+                        (0.5, 0.971),
+                        (0.546, 0.985),
+                        (0.58, 0.989),
+                        (0.62, 0.991),
+                        (0.66, 0.993),
+                        (0.7000000000000001, 0.994),
+                        (1.06, 0.998),
+                        (1.53, 0.995),
+                        (1.97, 0.963),
+                        (2.325, 0.752),
+                        (2.5, 0.48),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.88),
+        expansion_coefficient: Some(0.0000063399999999999994),
+    )),
+    "mechanical": Some((
+        density: Some(3530.0),
+        youngs_modulus: Some(108000000000.0),
+    )),
+}

@@ -1,0 +1,60 @@
+{
+    "schema_version": 1,
+    "id": "ef1f4ee8-d123-44da-a1f3-f762cb732dd3",
+    "version": 1,
+    "name": "N-SF66",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 2.0245976,
+                k2: 0.470187196,
+                k3: 2.59970433,
+                l1: 0.0147053225,
+                l2: 0.0692998276,
+                l3: 161.817601,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.37, 0.001),
+                        (0.38, 0.04),
+                        (0.39, 0.25),
+                        (0.4, 0.504),
+                        (0.405, 0.592),
+                        (0.42, 0.758),
+                        (0.436, 0.831),
+                        (0.46, 0.887),
+                        (0.5, 0.928),
+                        (0.546, 0.963),
+                        (0.58, 0.976),
+                        (0.62, 0.983),
+                        (0.66, 0.987),
+                        (0.7000000000000001, 0.991),
+                        (1.06, 0.996),
+                        (1.53, 0.989),
+                        (1.97, 0.947),
+                        (2.325, 0.837),
+                        (2.5, 0.793),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.8),
+        expansion_coefficient: Some(0.0000059),
+    )),
+    "mechanical": Some((
+        density: Some(4000.0),
+        youngs_modulus: Some(95000000000.0),
+    )),
+}

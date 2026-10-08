@@ -1,0 +1,21 @@
+{
+    "schema_version": 1,
+    "id": "d8a80d3c-19b1-45eb-a971-43ce8e533e24",
+    "version": 1,
+    "name": "Vacuum",
+    "description": Some("perfect vaccum"),
+    "optical": (
+        refractive_index: Const((
+            refractive_index: 1.0,
+        )),
+        absorption: r#None,
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.0),
+        expansion_coefficient: Some(0.0),
+    )),
+    "mechanical": Some((
+        density: Some(0.0),
+        youngs_modulus: None,
+    )),
+}

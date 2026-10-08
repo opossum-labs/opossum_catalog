@@ -1,0 +1,63 @@
+{
+    "schema_version": 1,
+    "id": "dbb323d1-822e-40de-b7b1-cbaff8bf23b7",
+    "version": 1,
+    "name": "N-SSK2",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.4306027,
+                k2: 0.153150554,
+                k3: 1.01390904,
+                l1: 0.00823982975,
+                l2: 0.0333736841,
+                l3: 106.870822,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.334, 0.084),
+                        (0.35000000000000003, 0.574),
+                        (0.365, 0.852),
+                        (0.37, 0.891),
+                        (0.38, 0.941),
+                        (0.39, 0.967),
+                        (0.4, 0.981),
+                        (0.405, 0.985),
+                        (0.42, 0.99),
+                        (0.436, 0.992),
+                        (0.46, 0.994),
+                        (0.5, 0.997),
+                        (0.546, 0.998),
+                        (0.58, 0.998),
+                        (0.62, 0.997),
+                        (0.66, 0.998),
+                        (0.7000000000000001, 0.998),
+                        (1.06, 0.997),
+                        (1.53, 0.992),
+                        (1.97, 0.971),
+                        (2.325, 0.877),
+                        (2.5, 0.758),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.81),
+        expansion_coefficient: Some(0.0000058099999999999994),
+    )),
+    "mechanical": Some((
+        density: Some(3530.0),
+        youngs_modulus: Some(82000000000.0),
+    )),
+}

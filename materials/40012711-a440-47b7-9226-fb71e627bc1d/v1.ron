@@ -1,0 +1,66 @@
+{
+    "schema_version": 1,
+    "id": "40012711-a440-47b7-9226-fb71e627bc1d",
+    "version": 1,
+    "name": "LF5HTi",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.28552924,
+                k2: 0.158357622,
+                k3: 0.892175122,
+                l1: 0.0093988626,
+                l2: 0.0452566659,
+                l3: 110.544829,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.3, 0.0),
+                        (0.31, 0.02),
+                        (0.32, 0.38),
+                        (0.334, 0.891),
+                        (0.35000000000000003, 0.985),
+                        (0.365, 0.996),
+                        (0.37, 0.997),
+                        (0.38, 0.998),
+                        (0.39, 0.999),
+                        (0.4, 0.999),
+                        (0.405, 0.999),
+                        (0.42, 0.999),
+                        (0.436, 0.999),
+                        (0.46, 0.999),
+                        (0.5, 0.999),
+                        (0.546, 0.999),
+                        (0.58, 0.999),
+                        (0.62, 0.999),
+                        (0.66, 0.999),
+                        (0.7000000000000001, 0.999),
+                        (1.06, 0.999),
+                        (1.53, 0.996),
+                        (1.97, 0.938),
+                        (2.325, 0.83),
+                        (2.5, 0.777),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.866),
+        expansion_coefficient: Some(0.0000091),
+    )),
+    "mechanical": Some((
+        density: Some(3220.0),
+        youngs_modulus: Some(59000000000.0),
+    )),
+}

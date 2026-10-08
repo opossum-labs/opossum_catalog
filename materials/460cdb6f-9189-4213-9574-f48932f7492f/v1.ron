@@ -1,0 +1,61 @@
+{
+    "schema_version": 1,
+    "id": "460cdb6f-9189-4213-9574-f48932f7492f",
+    "version": 1,
+    "name": "N-SF6HT",
+    "manufacturer": Some("Schott"),
+    "description": Some("Optical glass imported from Schott catalog"),
+    "optical": (
+        refractive_index: Sellmeier1((
+            coefficients: (
+                k1: 1.77931763,
+                k2: 0.338149866,
+                k3: 2.08734474,
+                l1: 0.0133714182,
+                l2: 0.0617533621,
+                l3: 174.01759,
+            ),
+            wvl_range: (
+                start: 0.00000030000000000000004,
+                end: 0.0000025,
+            ),
+        )),
+        absorption: CatalogTransmittance((
+            reference_thickness: 0.01,
+            spectrum: (
+                data: (
+                    values: [
+                        (0.365, 0.004),
+                        (0.37, 0.209),
+                        (0.38, 0.592),
+                        (0.39, 0.793),
+                        (0.4, 0.877),
+                        (0.405, 0.901),
+                        (0.42, 0.937),
+                        (0.436, 0.954),
+                        (0.46, 0.966),
+                        (0.5, 0.98),
+                        (0.546, 0.99),
+                        (0.58, 0.992),
+                        (0.62, 0.992),
+                        (0.66, 0.991),
+                        (0.7000000000000001, 0.994),
+                        (1.06, 0.999),
+                        (1.53, 0.992),
+                        (1.97, 0.946),
+                        (2.325, 0.826),
+                        (2.5, 0.793),
+                    ],
+                ),
+            ),
+        )),
+    ),
+    "thermal": Some((
+        thermal_conductivity: Some(0.96),
+        expansion_coefficient: Some(0.000009029999999999998),
+    )),
+    "mechanical": Some((
+        density: Some(3370.0),
+        youngs_modulus: Some(93000000000.0),
+    )),
+}
