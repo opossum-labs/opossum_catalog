@@ -1,12 +1,16 @@
-{
-    "schema_version": 1,
-    "id": "4c6b8add-eca0-462e-9154-4cceec67bcbc",
-    "version": 1,
-    "name": "LLF1",
-    "manufacturer": Some("Schott"),
-    "description": Some("Optical glass imported from Schott catalog"),
-    "optical": (
-        refractive_index: Sellmeier1((
+#![enable(implicit_some)]
+#![enable(unwrap_variant_newtypes)]
+(
+    header: (
+        schema_version: 1,
+        id: "4c6b8add-eca0-462e-9154-4cceec67bcbc",
+        version: 1,
+        name: "LLF1",
+        manufacturer: "Schott",
+        description: "Optical glass imported from Schott catalog",
+    ),
+    optical: (
+        refractive_index: Sellmeier1(
             coefficients: (
                 k1: 1.21640125,
                 k2: 0.13366454,
@@ -16,11 +20,11 @@
                 l3: 107.59306,
             ),
             wvl_range: (
-                start: 0.00000030000000000000004,
-                end: 0.0000025,
+                start: 3.0000000000000004e-7,
+                end: 2.5e-6,
             ),
-        )),
-        absorption: CatalogTransmittance((
+        ),
+        absorption: CatalogTransmittance(
             reference_thickness: 0.01,
             spectrum: (
                 data: (
@@ -54,14 +58,14 @@
                     ],
                 ),
             ),
-        )),
+        ),
     ),
-    "thermal": Some((
-        thermal_conductivity: Some(0.99),
-        expansion_coefficient: Some(0.000008099999999999999),
-    )),
-    "mechanical": Some((
-        density: Some(2940.0),
-        youngs_modulus: Some(60000000000.0),
-    )),
-}
+    thermal: (
+        thermal_conductivity: 0.99,
+        expansion_coefficient: 8.099999999999999e-6,
+    ),
+    mechanical: (
+        density: 2940.0,
+        youngs_modulus: 60000000000.0,
+    ),
+)

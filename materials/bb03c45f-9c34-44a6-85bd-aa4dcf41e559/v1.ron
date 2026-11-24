@@ -1,12 +1,16 @@
-{
-    "schema_version": 1,
-    "id": "bb03c45f-9c34-44a6-85bd-aa4dcf41e559",
-    "version": 1,
-    "name": "N-LASF44",
-    "manufacturer": Some("Schott"),
-    "description": Some("Optical glass imported from Schott catalog"),
-    "optical": (
-        refractive_index: Sellmeier1((
+#![enable(implicit_some)]
+#![enable(unwrap_variant_newtypes)]
+(
+    header: (
+        schema_version: 1,
+        id: "bb03c45f-9c34-44a6-85bd-aa4dcf41e559",
+        version: 1,
+        name: "N-LASF44",
+        manufacturer: "Schott",
+        description: "Optical glass imported from Schott catalog",
+    ),
+    optical: (
+        refractive_index: Sellmeier1(
             coefficients: (
                 k1: 1.78897105,
                 k2: 0.38675867,
@@ -16,11 +20,11 @@
                 l3: 92.7743824,
             ),
             wvl_range: (
-                start: 0.00000030000000000000004,
-                end: 0.0000025,
+                start: 3.0000000000000004e-7,
+                end: 2.5e-6,
             ),
-        )),
-        absorption: CatalogTransmittance((
+        ),
+        absorption: CatalogTransmittance(
             reference_thickness: 0.01,
             spectrum: (
                 data: (
@@ -53,14 +57,14 @@
                     ],
                 ),
             ),
-        )),
+        ),
     ),
-    "thermal": Some((
-        thermal_conductivity: Some(0.82),
-        expansion_coefficient: Some(0.00000621),
-    )),
-    "mechanical": Some((
-        density: Some(4440.0),
-        youngs_modulus: Some(124000000000.0),
-    )),
-}
+    thermal: (
+        thermal_conductivity: 0.82,
+        expansion_coefficient: 6.21e-6,
+    ),
+    mechanical: (
+        density: 4440.0,
+        youngs_modulus: 124000000000.0,
+    ),
+)

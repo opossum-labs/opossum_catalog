@@ -1,12 +1,16 @@
-{
-    "schema_version": 1,
-    "id": "fcd10134-9523-41d8-8de7-409d21eee49d",
-    "version": 1,
-    "name": "N-PSK53A",
-    "manufacturer": Some("Schott"),
-    "description": Some("Optical glass imported from Schott catalog"),
-    "optical": (
-        refractive_index: Sellmeier1((
+#![enable(implicit_some)]
+#![enable(unwrap_variant_newtypes)]
+(
+    header: (
+        schema_version: 1,
+        id: "fcd10134-9523-41d8-8de7-409d21eee49d",
+        version: 1,
+        name: "N-PSK53A",
+        manufacturer: "Schott",
+        description: "Optical glass imported from Schott catalog",
+    ),
+    optical: (
+        refractive_index: Sellmeier1(
             coefficients: (
                 k1: 1.38121836,
                 k2: 0.196745645,
@@ -16,11 +20,11 @@
                 l3: 97.4847345,
             ),
             wvl_range: (
-                start: 0.00000030000000000000004,
-                end: 0.0000025,
+                start: 3.0000000000000004e-7,
+                end: 2.5e-6,
             ),
-        )),
-        absorption: CatalogTransmittance((
+        ),
+        absorption: CatalogTransmittance(
             reference_thickness: 0.01,
             spectrum: (
                 data: (
@@ -52,14 +56,14 @@
                     ],
                 ),
             ),
-        )),
+        ),
     ),
-    "thermal": Some((
-        thermal_conductivity: Some(0.64),
-        expansion_coefficient: Some(0.00000956),
-    )),
-    "mechanical": Some((
-        density: Some(3570.0),
-        youngs_modulus: Some(76000000000.0),
-    )),
-}
+    thermal: (
+        thermal_conductivity: 0.64,
+        expansion_coefficient: 9.56e-6,
+    ),
+    mechanical: (
+        density: 3570.0,
+        youngs_modulus: 76000000000.0,
+    ),
+)

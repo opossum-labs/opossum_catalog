@@ -1,12 +1,16 @@
-{
-    "schema_version": 1,
-    "id": "53b0eb78-59ae-4dff-8e45-78f6792c1eb4",
-    "version": 1,
-    "name": "N-SF57HTultra",
-    "manufacturer": Some("Schott"),
-    "description": Some("Optical glass imported from Schott catalog"),
-    "optical": (
-        refractive_index: Sellmeier1((
+#![enable(implicit_some)]
+#![enable(unwrap_variant_newtypes)]
+(
+    header: (
+        schema_version: 1,
+        id: "53b0eb78-59ae-4dff-8e45-78f6792c1eb4",
+        version: 1,
+        name: "N-SF57HTultra",
+        manufacturer: "Schott",
+        description: "Optical glass imported from Schott catalog",
+    ),
+    optical: (
+        refractive_index: Sellmeier1(
             coefficients: (
                 k1: 1.87543831,
                 k2: 0.37375749,
@@ -16,11 +20,11 @@
                 l3: 177.389795,
             ),
             wvl_range: (
-                start: 0.00000030000000000000004,
-                end: 0.0000025,
+                start: 3.0000000000000004e-7,
+                end: 2.5e-6,
             ),
-        )),
-        absorption: CatalogTransmittance((
+        ),
+        absorption: CatalogTransmittance(
             reference_thickness: 0.01,
             spectrum: (
                 data: (
@@ -48,14 +52,14 @@
                     ],
                 ),
             ),
-        )),
+        ),
     ),
-    "thermal": Some((
-        thermal_conductivity: Some(0.99),
-        expansion_coefficient: Some(0.00000846),
-    )),
-    "mechanical": Some((
-        density: Some(3530.0),
-        youngs_modulus: Some(96000000000.0),
-    )),
-}
+    thermal: (
+        thermal_conductivity: 0.99,
+        expansion_coefficient: 8.46e-6,
+    ),
+    mechanical: (
+        density: 3530.0,
+        youngs_modulus: 96000000000.0,
+    ),
+)
